@@ -3,8 +3,8 @@
 <div class="col-lg-2 col-md-3 col-sm-6">
   <div class="well">
     <h2><small><%=todo.description%></small></h2>
-    <a href="<%= %>" class="btn btn-primary btn-xs">show</a>
-    <a href="<%= %>" class="btn btn-primary btn-xs">edit</a>
+    <a href="<%= todo_path(todo) %>" class="btn btn-primary btn-xs">show</a>
+    <a href="<%= todo_edit_path(todo) %>" class="btn btn-primary btn-xs">edit</a>
   </div>
 </div>
 <% end %>
