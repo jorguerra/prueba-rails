@@ -5,6 +5,7 @@
     <h2><small><%=todo.description%></small></h2>
     <a href="<%= todo_path(todo) %>" class="btn btn-primary btn-xs">show</a>
     <a href="<%= todo_edit_path(todo) %>" class="btn btn-primary btn-xs">edit</a>
+    <a href="<%= todo_delete_path(todo) %>" data-method="delete" class="btn btn-primary btn-xs">delete</a>  
   </div>
 </div>
 <% end %>
