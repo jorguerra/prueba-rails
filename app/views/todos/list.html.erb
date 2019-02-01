@@ -1,14 +1,18 @@
 <div class="row">
   <div class="col-sm-6">
-    <strong>No commpletados</strong>
+    <strong>No completados</strong>
     <% @todos.select{|todo| !todo.completed}.each do |t| %>
-    <p><%=t.description%></p>
+    <div style="border:1px solid grey; padding:1em">
+      <%= render 'edit', :todo=> t %>
+    </div>
     <% end %>
   </div>
   <div class="col-sm-6">
-    <strong>Commpletados</strong>
-    <% @todos.select{|todo| !todo.completed}.each do |t| %>
-    <p><%=t.description%></p>
+    <strong>Completados</strong>
+    <% @todos.select{|todo| todo.completed}.each do |t| %>
+    <div style="border:1px solid grey; padding: 1em">
+      <%= render 'edit', :todo=> t %>
+    </div>
     <% end %>
   </div>
 </div>
