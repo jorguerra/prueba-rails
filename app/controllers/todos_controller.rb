@@ -34,6 +34,12 @@ class TodosController < ApplicationController
     redirect_to todos_path
   end
 
+  def complete
+    @todo = Todo.find(params[:id])
+    @todo.update({completed: true})
+    redirect_to todos_path
+  end
+
   def todo_params
     params.require(:todo).permit(:description, :completed)
   end
