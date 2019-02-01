@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-sm-6">
+    <strong>No commpletados</strong>
+    <% @todos.select{|todo| !todo.completed}.each do |t| %>
+    <p><%=t.description%></p>
+    <% end %>
+  </div>
+  <div class="col-sm-6">
+    <strong>Commpletados</strong>
+    <% @todos.select{|todo| !todo.completed}.each do |t| %>
+    <p><%=t.description%></p>
+    <% end %>
+  </div>
+</div>
